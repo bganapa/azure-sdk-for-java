@@ -24,7 +24,7 @@ steps:
       Copy-Item "$(System.DefaultWorkingDirectory)/eng" "$pomfDir/eng" -Recurse
 
       while ($retries++ -lt ${{parameters.RetryLimit}}) {
-        Write-Host "mvn install -DpomFile $pomfDir $(DefaultOptions) -Dcheckstyle.skip=true"
+        Write-Host "mvn install -DpomFile=$pomfDir $(DefaultOptions) -Dcheckstyle.skip=true"
         mvn install -DpomFile $pomfDir $(DefaultOptions) -Dcheckstyle.skip=true
         if ($LASTEXITCODE) {
           if ($retries -ge ${{parameters.RetryLimit}}) {
