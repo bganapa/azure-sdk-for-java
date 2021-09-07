@@ -19,8 +19,8 @@ steps:
       # Write-Host "$pomf = Get-ChildItem install-check-dir/${{parameters.Artifact.name}}/*.pom"
       $pomfDir = "$(Pipeline.Workspace)/${{parameters.ArtifactName}}-signed/${{parameters.Artifact.groupId}}/${{parameters.Artifact.name}}"
       $pomf = Get-ChildItem "$pomfDir/*.pom"
-      # Write-Host "Rename-Item $($pomf) pom.xml"
-      # Rename-Item $pomf pom.xml
+      Write-Host "Rename-Item $($pomf) pom.xml"
+      Rename-Item $pomf pom.xml
       Copy-Item "$(System.DefaultWorkingDirectory)/eng" "$pomfDir/eng" -Recurse
 
       while ($retries++ -lt ${{parameters.RetryLimit}}) {
