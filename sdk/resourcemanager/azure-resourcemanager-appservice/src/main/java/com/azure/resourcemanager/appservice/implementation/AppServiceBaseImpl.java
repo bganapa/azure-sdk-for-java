@@ -243,7 +243,7 @@ abstract class AppServiceBaseImpl<
 
     @Override
     public Mono<Void> verifyDomainOwnershipAsync(String certificateOrderName, String domainVerificationToken) {
-        IdentifierInner identifierInner = new IdentifierInner().withKind(domainVerificationToken);
+        IdentifierInner identifierInner = new IdentifierInner().withValue(domainVerificationToken);
         return this
             .manager()
             .serviceClient()
