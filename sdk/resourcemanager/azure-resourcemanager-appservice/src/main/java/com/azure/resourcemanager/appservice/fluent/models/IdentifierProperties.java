@@ -18,25 +18,25 @@ public final class IdentifierProperties {
      * String representation of the identity.
      */
     @JsonProperty(value = "id")
-    private String value;
+    private String id;
 
     /**
-     * Get the value property: String representation of the identity.
+     * Get the id property: String representation of the identity.
      *
-     * @return the value value.
+     * @return the id value.
      */
-    public String value() {
-        return this.value;
+    public String id() {
+        return this.id;
     }
 
     /**
-     * Set the value property: String representation of the identity.
+     * Set the id property: String representation of the identity.
      *
-     * @param value the value value to set.
+     * @param id the id value to set.
      * @return the IdentifierProperties object itself.
      */
-    public IdentifierProperties withValue(String value) {
-        this.value = value;
+    public IdentifierProperties withId(String id) {
+        this.id = id;
         return this;
     }
 

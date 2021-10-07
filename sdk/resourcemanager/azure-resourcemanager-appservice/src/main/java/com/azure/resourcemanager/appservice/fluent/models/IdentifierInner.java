@@ -38,25 +38,25 @@ public final class IdentifierInner extends ProxyOnlyResource {
     }
 
     /**
-     * Get the value property: String representation of the identity.
+     * Get the id property: String representation of the identity.
      *
-     * @return the value value.
+     * @return the id value.
      */
-    public String value() {
-        return this.innerProperties() == null ? null : this.innerProperties().value();
+    public String idPropertiesId() {
+        return this.innerProperties() == null ? null : this.innerProperties().id();
     }
 
     /**
-     * Set the value property: String representation of the identity.
+     * Set the id property: String representation of the identity.
      *
-     * @param value the value value to set.
+     * @param id the id value to set.
      * @return the IdentifierInner object itself.
      */
-    public IdentifierInner withValue(String value) {
+    public IdentifierInner withIdPropertiesId(String id) {
         if (this.innerProperties() == null) {
             this.innerProperties = new IdentifierProperties();
         }
-        this.innerProperties().withValue(value);
+        this.innerProperties().withId(id);
         return this;
     }
 
